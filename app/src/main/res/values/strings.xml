@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Maps</string>
+    <string name="button_text">Войти</string>
+    <string name="Forgot_your_password">Забыли пароль?</string>
+    <string name="сome">Войти</string>
+    <string name="You_are_not_with_us_yet">Вы ещё не с нами ?</string>
+    <string name="Registration">Регистрация</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

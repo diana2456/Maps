@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LoginFragment">
+
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="296dp"
+        android:layout_height="106dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bike_logo_min" />
+
+    <TextView
+        android:id="@+id/tv_text_orange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Авторизация"
+        app:layout_constraintTop_toBottomOf="@id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="60dp"
+        android:textColor="#D8690E"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/tv_text_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Регистрация"
+        app:layout_constraintTop_toBottomOf="@id/imageView3"
+        app:layout_constraintStart_toEndOf="@id/tv_text_orange"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_tv_login"
+        android:layout_width="370dp"
+        android:layout_height="70dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_text_orange"
+        android:hint="Имя (позывной)"
+        app:boxStrokeWidth="3dp"
+        app:boxStrokeColor="#130101"
+        android:layout_marginTop="50dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingStart="15dp"
+            android:textColor="#120D0D"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_tv_password"
+        android:layout_width="370dp"
+        android:layout_height="70dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_tv_login"
+        android:hint="Пароль"
+        app:boxStrokeWidth="3dp"
+        app:boxStrokeColor="@color/black"
+        android:backgroundTint="@color/black"
+        android:layout_marginTop="20dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tv_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:imeOptions="actionSearch"
+            android:inputType="textPassword"
+            android:paddingStart="15dp"
+            android:textColor="#120D0D"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_come"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cornerRadius="26dp"
+        android:text="@string/сome"
+        android:textAllCaps="false"
+        android:layout_marginTop="20dp"
+        android:textSize="19sp"
+        app:layout_constraintTop_toBottomOf="@id/layout_tv_password"/>
+
+    <TextView
+        android:id="@+id/tv_forgot_your_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_come"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:text="@string/Forgot_your_password"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_you_are_not_with_us_yet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/You_are_not_with_us_yet"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_you_are_not_with_us_yet"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="@string/Registration"
+        android:textColor="@color/black"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
