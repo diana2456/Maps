@@ -1,8 +1,11 @@
-package com.example.maps;
+package com.example.maps.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.maps.R;
+import com.example.maps.ui.fragment.LoginFragment;
 
 import java.util.Objects;
 

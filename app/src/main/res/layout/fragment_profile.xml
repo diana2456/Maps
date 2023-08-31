@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/yellow"
+    tools:context=".ui.fragment.ProfileFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_back"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:background="@color/black"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="33dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="1.5dp"
+                    android:layout_marginStart="18dp"
+                    android:background="@drawable/baseline_arrow_back_ios_24"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_right"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:background="@color/black"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/menu"/>
+                    </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/ll_back"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Профиль"
+                android:textSize="24sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="90dp"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/iv_photo"
+                android:layout_width="170dp"
+                android:layout_height="179dp"
+                app:layout_constraintTop_toBottomOf="@id/ll_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/photo_profile"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_photo"
+                android:text="Бещенный пёс"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_frends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_name"
+                android:text="Друзей"
+                android:layout_marginStart="20dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 app:layout_constraintTop_toBottomOf="@id/tv_name"
+                android:text="544"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="24sp"
+                android:layout_marginEnd="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_och"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_frends"
+                android:text="Очков"
+                android:layout_marginStart="20dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_frends"
+                android:text="10567"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="24sp"
+                android:layout_marginEnd="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_proi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_och"
+                android:text="Пройдено"
+                android:layout_marginStart="20dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_och"
+                android:text="354099"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="24sp"
+                android:layout_marginEnd="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_trans"
+                android:layout_width="360dp"
+                android:layout_height="75dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cornerRadius="26dp"
+                android:text="Мой транспорт"
+                android:textAllCaps="false"
+                android:layout_marginTop="70dp"
+                android:textSize="19sp"
+                 app:layout_constraintTop_toBottomOf="@id/tv_proi"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_marsh"
+                android:layout_width="360dp"
+                android:layout_height="75dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cornerRadius="26dp"
+                android:text="Маршруты"
+                android:textAllCaps="false"
+                android:layout_marginTop="20dp"
+                android:textSize="19sp"
+                android:layout_marginBottom="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_trans"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

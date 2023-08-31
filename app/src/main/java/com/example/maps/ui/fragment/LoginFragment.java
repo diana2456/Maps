@@ -1,4 +1,4 @@
-package com.example.maps;
+package com.example.maps.ui.fragment;
 
 import android.os.Bundle;
 
@@ -11,14 +11,16 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
+import android.widget.TextView;
 
+import com.example.maps.R;
 import com.google.android.material.button.MaterialButton;
 
 
 public class LoginFragment extends Fragment {
 
     private MaterialButton button;
+    private TextView textView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,7 +38,21 @@ public class LoginFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment newFragment = new MapsFragment();
+                Fragment newFragment = new ProfileFragment();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+
+                FragmentManager fragmentManager = getFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, newFragment).commit();
+            }
+        });
+
+        textView = view.findViewById(R.id.tv_regis);
+
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment newFragment = new RegistrationFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
 
                 FragmentManager fragmentManager = getFragmentManager();
