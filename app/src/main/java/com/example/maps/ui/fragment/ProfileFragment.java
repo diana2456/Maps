@@ -91,32 +91,11 @@ public class ProfileFragment extends Fragment {
     }
 
     public void main() {
-        String jdbcUrl = "jdbc:mysql://localhost:3306/sattarvj_demo200";
+       /* String jdbcUrl = "jdbc:mysql://localhost:3306/sattarvj_demo200";
         String username = "<sattarvj_demo200>";
         String password = "<Aaa123>";
+*/
 
-        try {
-            Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
-
-            String selectQuery = "SELECT * FROM users";
-
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(selectQuery);
-
-            while (resultSet.next()) {
-                String photo = resultSet.getString("username");
-                String name = resultSet.getString("Img");
-
-                binding.tvName.setText(photo);
-                Glide.with(binding.ivPhoto).load(name).into(binding.ivPhoto);
-            }
-
-            resultSet.close();
-            statement.close();
-            connection.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
 
 }
